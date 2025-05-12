@@ -1,9 +1,0 @@
-spacy
-assemblyai
-dotenv
-librosa
-pandas
-streamlit
-matplotlib
-seaborn
-audio_recorder_streamlit

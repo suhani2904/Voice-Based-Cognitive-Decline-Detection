@@ -21,23 +21,14 @@ This project demonstrates a proof-of-concept pipeline for **early detection of c
 - **Python 3.8+**
 - **Libraries:**
   - assemblyai – (for optional ASR/transcription, if used)
-  - 
   - dotenv – Environment variable management
-
   - librosa – Audio processing and feature extraction
-    
   - pandas – Data manipulation and analysis
-    
   - streamlit – Interactive web app interface
-    
   - matplotlib, seaborn – Data visualization
-    
   - audio_recorder_streamlit – In-browser audio recording
-    
   - numpy – Numerical computing (pinned to <2.0.0 for compatibility)
-    
   - spacy – Natural Language Processing (NLP)
-    
   - en_core_web_sm – spaCy English language model
 
 ---
@@ -60,4 +51,25 @@ This project demonstrates a proof-of-concept pipeline for **early detection of c
 ## ✅ Setup Instructions
 
 1. **Clone the repository**
+```
+git clone https://github.com/your-username/Voice-Based-Cognitive-Decline-Pattern-Detection.git
+cd Voice-Based-Cognitive-Decline-Pattern-Detection
+```
+
+2. **Install dependencies**
+```
+pip install -r requirements.txt
+```
+---
+
+3. **▶️ Running the Web App**
+```
+streamlit run app.py
+```
+
+Then open the URL shown in the terminal (usually **[http://localhost:8501]**(http://localhost:8501)).
+
+Or try the deployed app:  
+**[Live Demo](https://voice-based-cognitive-decline-detection-bbkf42sh3fquvfh5svwxk6.streamlit.app/)**
+
 

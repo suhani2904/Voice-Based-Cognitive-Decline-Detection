@@ -1,75 +1,76 @@
-# Voice-Based-Cognitive-Decline-Detection
+# 🎙️ Voice-Based Cognitive Decline Detection
 
-## Project Overview
+## 📌 Overview
+Voice-based cognitive decline detection is an AI-driven healthcare project that analyzes speech patterns to identify early signs of cognitive impairment such as dementia or Alzheimer’s disease.
 
-This project demonstrates a proof-of-concept pipeline for **early detection of cognitive stress or decline** using analysis of raw voice data. The system leverages both **acoustic** and **linguistic** features extracted from speech, applying unsupervised machine learning to identify abnormal patterns that may indicate mild cognitive impairment (MCI) or early-stage dementia.
+This project uses **acoustic and linguistic features extracted from speech recordings** and applies machine learning models to detect potential cognitive decline.
+
+Early detection can help healthcare professionals intervene sooner and improve patient outcomes.
 
 ---
 
 ## 🚀 Features
-
-- **🔊 Speech-to-text transcription:** Uses Facebook's Wav2Vec2 for accurate, offline audio transcription.
-- **🧠 Cognitive speech markers:** Extracts features such as hesitations, silent pauses, speech rate, pitch variability, and word recall issues.
-- **🤖 Unsupervised anomaly & cluster detection:** Applies Isolation Forest and K-Means to flag speech patterns potentially indicative of cognitive decline.
-- **📉 PCA-based visualization:** Projects feature space into 2D for cluster and anomaly visualization.
-- **🌐 Interactive web interface:** User-friendly Streamlit app for uploading/recording audio, feature inspection, and risk assessment.
+- Speech-based cognitive health analysis
+- Acoustic feature extraction using **OpenSMILE**
+- Audio processing using **librosa**
+- Linguistic feature extraction using **RoBERTa**
+- Multiple ML models for classification
+- Model comparison and optimization
+- Focus on reducing **false negatives** for reliable detection
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Python 3.8+**
-- **Libraries:**
-  - assemblyai – (for optional ASR/transcription, if used)
-  - dotenv – Environment variable management
-  - librosa – Audio processing and feature extraction
-  - pandas – Data manipulation and analysis
-  - streamlit – Interactive web app interface
-  - matplotlib, seaborn – Data visualization
-  - audio_recorder_streamlit – In-browser audio recording
-  - numpy – Numerical computing (pinned to <2.0.0 for compatibility)
-  - spacy – Natural Language Processing (NLP)
-  - en_core_web_sm – spaCy English language model
+**Programming Language**
+- Python
 
----
-## 📂 How It Works
-
-1. **Upload or record** an audio file (.wav).
-2. **Transcription:** The audio is transcribed to text using Assemblyai.
-3. **Feature extraction:** Acoustic and linguistic features are computed, including:
-   - Hesitations and hedge words
-   - Silent pause counts
-   - Speech rate and pitch variability
-   - Word repetition and recall issues
-4. **Unsupervised analysis:** K-Means clustering and Isolation Forest flag outliers and cluster membership.
-5. **Visualization:** PCA scatterplot shows your sample relative to the dataset.
-6. **Interpretation:** The app provides a risk label ("High Risk"/"Low Risk"/"Moderate Risk) and a table of extracted features.
-
+**Libraries & Frameworks**
+- NumPy
+- Pandas
+- Scikit-learn
+- XGBoost
+- Librosa
+- OpenSMILE
+- HuggingFace Transformers (RoBERTa)
+- Matplotlib / Seaborn
 
 ---
 
-## ✅ Setup Instructions
+## 🔬 Project Pipeline
 
-1. **Clone the repository**
-```
-git clone https://github.com/your-username/Voice-Based-Cognitive-Decline-Pattern-Detection.git
-cd Voice-Based-Cognitive-Decline-Pattern-Detection
-```
+1. **Data Collection**
+   - Created a dataset of speech recordings.
 
-2. **Install dependencies**
-```
-pip install -r requirements.txt
-```
+2. **Preprocessing**
+   - Audio normalization
+   - Noise removal
+
+3. **Feature Extraction**
+   - Acoustic features (MFCCs, pitch, spectral features)
+   - Linguistic features from speech transcripts
+
+4. **Model Training**
+   - Support Vector Machine (SVM)
+   - Random Forest
+   - XGBoost
+
+5. **Model Evaluation**
+   - Accuracy
+   - Precision
+   - Recall
+   - F1 Score
+
 ---
 
-3. **▶️ Running the Web App**
-```
-streamlit run app.py
-```
+## 📊 Model Performance
 
-Then open the URL shown in the terminal (usually **[http://localhost:8501]**(http://localhost:8501)).
+| Model | Accuracy |
+|------|---------|
+| SVM | ~90% |
+| Random Forest | ~92% |
+| XGBoost | **~94%** |
 
-Or try the deployed app:  
-**[Live Demo](https://voice-based-cognitive-decline-detection-bbkf42sh3fquvfh5svwxk6.streamlit.app/)**
+XGBoost achieved the best performance for detecting cognitive decline.
 
-
+---
